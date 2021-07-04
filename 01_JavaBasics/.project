@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>01_JavaBasics</name>
+	<comment></comment>
+	<projects>
+		<project>imoocProj</project>
+		<project>Programming_Assignment_3_4</project>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+</projectDescription>

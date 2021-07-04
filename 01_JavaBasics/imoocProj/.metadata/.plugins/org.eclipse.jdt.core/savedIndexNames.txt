@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/Users/chenzhou/Documents/Study/Computer Science Learning/imooc/javaCourse/01_JavaBasics/imoocProj/.metadata/.plugins/org.eclipse.jdt.core
+3903417306.index
+2670150068.index
