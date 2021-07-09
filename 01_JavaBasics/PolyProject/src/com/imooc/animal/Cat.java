@@ -34,4 +34,8 @@ public class Cat extends Animal {
 		System.out.println("猫吃鱼");
 	}
 	
+	public static void say() {//和animal的say不构成重写
+		System.out.println("cat say");
+	}
+	
 }

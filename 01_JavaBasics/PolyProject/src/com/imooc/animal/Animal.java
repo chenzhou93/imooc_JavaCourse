@@ -35,4 +35,8 @@ public class Animal {
 		System.out.println("动物都有吃东西的能力");
 	}
 	
+	public static void say() {//子类只能继承不能重写
+		System.out.println("say");
+	}
+	
 }
