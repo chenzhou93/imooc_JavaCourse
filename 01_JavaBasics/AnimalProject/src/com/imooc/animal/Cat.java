@@ -35,6 +35,11 @@ public class Cat extends Animal{
 		eat();
 		System.out.println(this.getName() + "是一只" + this.getSpecies() + "，快乐的奔跑。 ");
 	}
+
+	public void play() {
+		System.out.println("cat plays");
+		
+	}
 	
 	
 }

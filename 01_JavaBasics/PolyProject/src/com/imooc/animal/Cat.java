@@ -37,5 +37,10 @@ public class Cat extends Animal {
 	public static void say() {//和animal的say不构成重写
 		System.out.println("cat say");
 	}
+
+	public void play() {
+		// TODO Auto-generated method stub
+		System.out.println("cats play");
+	}
 	
 }
