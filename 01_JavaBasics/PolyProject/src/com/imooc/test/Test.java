@@ -16,11 +16,11 @@ public class Test {
 		 * 父类中的静态方法无法被子类重写，向上转型之后，只能调用父类原有的静态方法
 		 * 无法调用子类特有的方法
 		 */
-		Animal one = new Animal(); //1
+		//Animal one = new Animal(); //1
 		Animal two = new Cat();//2
 		Animal three = new Dog();//3
 		
-		one.eat();
+		//one.eat();
 		two.eat();
 		three.eat();
 		
