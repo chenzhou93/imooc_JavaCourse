@@ -7,4 +7,8 @@ package com.imooc.tel;
 public interface IPhoto {
 	//
 	public void photo();
+	
+	default void connection() {
+		System.out.println("iphoto connection");
+	}
 }
