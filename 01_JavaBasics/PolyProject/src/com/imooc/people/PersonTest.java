@@ -4,7 +4,7 @@ public class PersonTest {
 	public static void main(String[] args) {
 		Person lili = new Person();
 		lili.age = 12;
-		
+		/*
 		//获取内部类的实例对象
 		//方法一：new外部类，new内部类
 		Person.Heart myHeart = new Person().new Heart();
@@ -17,5 +17,16 @@ public class PersonTest {
 		//方法三：外部类对象.获取方法
 		myHeart = lili.getHeart();
 		System.out.println(myHeart.beat());
+		
+		*/
+		
+		/*
+		Person.Heart myHeart = new Person.Heart();
+		System.out.println(myHeart.beat());
+		
+		Person.Heart.say();
+		*/
+		
+		System.out.println(lili.getHeart());
 	}
 }
