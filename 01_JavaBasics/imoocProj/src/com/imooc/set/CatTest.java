@@ -11,11 +11,11 @@ public class CatTest {
 		Cat huahua = new Cat("huahua", 12, "shorthair");
 		Cat fanfan = new Cat("fanfan", 3, "tyumao");
 		
-		Set set = new HashSet();
+		Set<Cat> set = new HashSet();
 		set.add(huahua);
 		set.add(fanfan);
 		
-		Iterator it = set.iterator();
+		Iterator<Cat> it = set.iterator();
 		while(it.hasNext()) {
 			System.out.println(it.next());
 		}
@@ -64,6 +64,20 @@ public class CatTest {
 			System.out.println(c);
 		}else {
 			System.out.println("huahua not found");
+		}
+		Set<Cat> set1 = new HashSet<Cat>();
+		for(Cat cat : set) {
+			if("huahua".equals(cat.getName())) {
+				//set.remove(cat);
+				//break;
+				set1.add(cat);
+			}
+		}
+		set1.removeAll(set1);
+		
+		boolean flag1 = set.removeAll(set);
+		if(flag1) {
+			System.out.println("all cats are gone");
 		}
 	}
 
