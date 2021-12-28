@@ -6,7 +6,7 @@ import java.io.IOException;
 public class FileDemo {
 
 	public static void main(String[] args) {
-		File file1 = new File("c:\\imooc\\io\\score.txt");
+		File file1 = new File("/Users/chenzhou/Documents/Study/Computer Science Learning");
 		
 		//File file1 = new File("c:\\imooc", "io\\score.txt");
 //		File file = new File("c:\\imooc");
@@ -16,7 +16,7 @@ public class FileDemo {
 		System.out.println("is file: " + file1.isFile());
 		
 		//Create Directory
-		File file2 = new File("c:\\imooc\\set", "HashSet");
+		File file2 = new File("/Users/chenzhou/Documents/Study/Computer Science Learning", "Test");
 		if(!file2.exists()) {
 			file2.mkdirs();
 		}
