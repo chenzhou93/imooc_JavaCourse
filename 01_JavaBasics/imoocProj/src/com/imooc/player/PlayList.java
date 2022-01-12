@@ -7,6 +7,22 @@ public class PlayList {
 	private String playListName;
 	private List<Song> musicList;
 	
+	public String getPlayListName() {
+		return playListName;
+	}
+
+	public void setPlayListName(String playListName) {
+		this.playListName = playListName;
+	}
+
+	public List<Song> getMusicList() {
+		return musicList;
+	}
+
+	public void setMusicList(List<Song> musicList) {
+		this.musicList = musicList;
+	}
+
 	public PlayList(String playListName) {
 		this.playListName = playListName;
 		musicList = new ArrayList<Song>();
