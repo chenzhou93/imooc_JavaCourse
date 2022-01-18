@@ -98,6 +98,12 @@ public class TestDemo {
 		TestDemo td = new TestDemo();
 		Scanner sc = new Scanner(System.in);
 		int input =0, input1 = 0, input2=0;
+		//Create a collection of playlist
+		PlayListCollection plc = new PlayListCollection();
+		//Create main playlist
+		PlayList mainPlayList = new PlayList("main playlist");
+		plc.addPlayList(mainPlayList);
+		PlayList favoritePlayList = null;
 		while(true) {
 			td.mainMenu();
 			System.out.println("input number");
@@ -115,10 +121,35 @@ public class TestDemo {
 						break;
 					}
 					switch(input1) {
-						case 1: System.out.println("add to main PLAYLIST"); break;
-						case 2: System.out.println("add to regular PLAYLIST"); break;
-						case 3: System.out.println("search PLAYLIST by id"); break;
-						default: System.out.println("no op"); break;
+						case 1: 
+							System.out.println("add to main PLAYLIST"); 
+							System.out.println("input the number of songs");
+							int count = sc.nextInt();
+							for(int i=1; i<=count; i++) {
+								System.out.println("please input " + i + " song");
+								System.out.println("please input id");
+								String strId = sc.next();
+								System.out.println("please input name");
+								String strName = sc.next();
+								System.out.println("please input singer");
+								String strSinger = sc.next();
+								//Create Song class object
+								Song song = new Song(strId, strName, strSinger);
+								mainPlayList.addToPlayList(song);
+							}
+							break;
+						case 2: 
+							System.out.println("add to regular PLAYLIST");
+							System.out.println("playlist name");
+							String playerName = sc.next();
+							//Create new playlist object
+							favoritePlayList = new PlayList(playerName);
+							plc.addPlayList(favoritePlayList);
+							break;
+						case 3: 
+							System.out.println("search PLAYLIST by id"); break;
+						default: 
+							System.out.println("no op"); break;
 					}
 				}
 				break;
