@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Collections;
 
 public class ReaderDemo {
 
@@ -17,7 +18,7 @@ public class ReaderDemo {
 			
 			FileOutputStream fos = new FileOutputStream("imooc1.txt");
 			OutputStreamWriter osw = new OutputStreamWriter(fos);
-			
+
 			int n = 0;
 			char[] cbuf = new char[10];
 			
