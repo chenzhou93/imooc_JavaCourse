@@ -58,7 +58,10 @@ public class Banji {
 
     //通过学号查询学生在班级中是否存在： 
 	public Student searchStudentByNum(String stuNum){
+		System.out.println("search here");
+		System.out.println("id: " + stuNum);
 		for(Student std : stuList) {
+			System.out.println("std " + std);
 			if(std.getStuName().equals(stuNum)){
 				return std;
 			}
@@ -79,6 +82,7 @@ public class Banji {
 		Student std = searchStudentByNum(stuNum);
 		if(std != null) {
 			std.setMath(score);
+			System.out.println("设置语文成绩成功");
 		}
 	}
 
@@ -96,5 +100,12 @@ public class Banji {
 			System.out.println(s);
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "Banji [classId=" + classId + ", className=" + className + "]";
+	}
+	
+	
 	
 }

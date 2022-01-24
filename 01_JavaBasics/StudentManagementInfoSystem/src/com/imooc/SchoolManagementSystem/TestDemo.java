@@ -7,21 +7,18 @@ import java.util.Scanner;
 public class TestDemo {
 	public List<Student> mainStudentList;
 	private School school;
-	private Banji bj;
 	
     //学校的测试方法：
 	public void testBanJi(){
-		bj = new Banji();
 		Scanner s = new Scanner(System.in);
 		while(true) {
 			banJiMenu();
 			int cmdBanji = s.nextInt();
-			if(cmdBanji == 9) {
-				break;
-			}else if(cmdBanji > 0 && cmdBanji < 8) {
+			if(cmdBanji > 0 && cmdBanji < 10) {
 				switch(cmdBanji) {
 					case 1:
 						mainStudentList = new ArrayList<Student>();
+						System.out.println("请输入添加学生个数");
 						int num = s.nextInt();
 						for(int i=0; i<num; i++) {
 							
@@ -50,7 +47,7 @@ public class TestDemo {
 					case 2:
 						System.out.println("请输入要添加的班级名称");
 						String bjName = s.next();
-						Banji tmpBJ = school.searchByName(bjName);
+						Banji tmpBJ = school.searchByName(bjName) == null ? null : school.searchByName(bjName);
 						if(tmpBJ != null) {
 							System.out.println("请输入要添加的学生个数");
 							int num1 = s.nextInt();
@@ -60,7 +57,7 @@ public class TestDemo {
 								String stuId = s.next();
 								boolean flag = false;
 								for(Student std : mainStudentList) {
-									if(std.getStuNum() == stuId) {
+									if(std.getStuNum().equals(stuId)) {
 										flag = true;
 										break;
 									}
@@ -71,7 +68,10 @@ public class TestDemo {
 									Student stu = new Student();
 									stu.setStuNum(stuId);
 									stu.setStuName(name);
+									System.out.println(stu);
 									tmpBJ.addStudent(stu);
+									school.getSchoolMap().put(tmpBJ.getClassId(), tmpBJ);
+									System.out.println("添加成功");
 								}else {
 									System.out.println("学生不在主学生列表中");
 								}
@@ -80,41 +80,68 @@ public class TestDemo {
 						}else {
 							System.out.println("该班级不存在");
 						}
+						break;
 						
-						break;
 					case 3:
+						System.out.println("请输入要查询的班级名称");
+						String banjiID3 = s.next();
+						Banji bj3 = school.searchByName(banjiID3);
 						System.out.println("请输入学生学号");
-						String banjiId3 = s.next();
-						bj.searchStudentByNum(banjiId3);
+						String studentID3 = s.next();
+						
+						if(bj3 != null) {
+							Student sRes = bj3.searchStudentByNum(studentID3);
+							System.out.println(sRes);
+						}
 						break;
+						
 					case 4:
+						System.out.println("请输入要查询的班级名称");
+						String banjiName4 = s.next();
+						Banji bj4 = school.searchByName(banjiName4);
 						System.out.println("请输入学生学号");
-						String banjiId4 = s.next();
+						String studentId4 = s.next();
 						System.out.println("请输入学生语文成绩");
 						Float chineseGrade = s.nextFloat();
-						bj.insertChineseScore(banjiId4, chineseGrade);
+						bj4.insertChineseScore(studentId4, chineseGrade);
+						school.getSchoolMap().put(banjiName4, bj4);
 						break;
+						
 					case 5:
+						System.out.println("请输入要查询的班级名称");
+						String banjiName5 = s.next();
+						Banji bj5 = school.searchByName(banjiName5);
 						System.out.println("请输入学生学号");
-						String banjiId5 = s.next();
+						String studentId5 = s.next();
 						System.out.println("请输入学生数学成绩");
-						Float matGrade = s.nextFloat();
-						bj.insertChineseScore(banjiId5, matGrade);
+						Float mathGrade = s.nextFloat();
+						bj5.insertChineseScore(studentId5, mathGrade);
+						school.getSchoolMap().put(banjiName5, bj5);
 						break;
+						
 					case 6:
-						System.out.println("请输入学生学号");
-						String banjiId6 = s.next();
-						bj.deleteStudent(banjiId6);
+						System.out.println("请输入要查询的班级名称");
+						String banjiName6 = s.next();
+						Banji bj6 = school.searchByName(banjiName6);
+						bj6.displayAllStudent();
 						break;
+						
 					case 7:
-						bj.displayAllStudent();
+						System.out.println("请输入要查询的班级名称");
+						String banjiName7 = s.next();
+						Banji bj7 = school.searchByName(banjiName7);
+						bj7.displayAllStudent();
 						break;
+						
+					case 9:
+						test();
+						break;
+						
 					default:
 						break;
 				}
 			}
 		}
-		s.close();
 	}
 	
 	//班级的测试方法：
@@ -157,12 +184,14 @@ public class TestDemo {
 					case 6:
 						school.displayBanJiName();
 						break;
+					case 9:
+						test();
+						break;
 					default:
 						break;
 				}
 			}
 		}
-		s.close();
 	}
 
 		
@@ -203,28 +232,38 @@ public class TestDemo {
 
     //主流程：
 	public void test(){
-		mainMenu();
-		System.out.println("请输入对应数字进行列表管理");
 		Scanner s = new Scanner(System.in);
-		int command = s.nextInt();
-		switch(command) {
-			case 1:
-				testBanJi();
+		while(true) {
+			mainMenu();
+			System.out.println("请输入对应数字进行列表管理");
+			
+			int command = s.nextInt();
+			if(command == 0) {
 				break;
-			case 2:
-				testSchool();
-				break;
-			case 0:
-				break;
-			default:
-				break;
+			}else if(command == 1 || command == 2){
+				switch(command) {
+					case 1:
+						testBanJi();
+						break;
+					case 2:
+						testSchool();
+						break;
+					default:
+						break;
+				}
+			}
+			
 		}
+		
+		s.close();
 		
 		
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		TestDemo test = new TestDemo();
+		test.test();
 
 	}
 

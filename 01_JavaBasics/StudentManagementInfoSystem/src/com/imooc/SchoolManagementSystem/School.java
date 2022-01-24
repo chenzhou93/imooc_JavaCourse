@@ -23,15 +23,15 @@ public class School {
 	
 	//添加班级：
 	public void addBanji(Banji banji){
-		if(banji != null && banji.getClassName() != null) {
-			schoolMap.put(banji.getClassName(), banji);
+		if(banji != null && banji.getClassId() != null) {
+			schoolMap.put(banji.getClassId(), banji);
 		}
 	}
 
     //删除班级 ： 
 	public void deleteBanji(Banji banji){
-		if(banji != null && banji.getClassName() != null) {
-			schoolMap.remove(banji.getClassName());
+		if(banji != null && banji.getClassId() != null) {
+			schoolMap.remove(banji.getClassId());
 		}
 	}
 
@@ -54,7 +54,7 @@ public class School {
 				total += s.getChinese();
 			}
 			avg = total / (studentList.size());
-			classNameToChineseAvg.put(b.getClassName(), avg);
+			classNameToChineseAvg.put(b.getClassId(), avg);
 		}
 		Collections.sort((List<Float>)classNameToChineseAvg.values());
 	}
@@ -70,7 +70,7 @@ public class School {
 				total += s.getMath();
 			}
 			avg = total / (studentList.size());
-			classNameToMathAvg.put(b.getClassName(), avg);
+			classNameToMathAvg.put(b.getClassId(), avg);
 		}
 		Collections.sort((List<Float>)classNameToMathAvg.values());
 	}
