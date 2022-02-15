@@ -1,0 +1,15 @@
+p{
+	background-color: red;
+	font-size: 40px;
+}
+.p1{
+	font-family: Arial;
+}
+body{
+	background-color: #f5f5f5;
+	background-image: url("image/test.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed; /* 背景图片不发生改变，文字滚动 */
+	background-position: top center;
+	/* background: yellow url("image/test.jpg") no-repeat fixed; */
+}
