@@ -1,0 +1,17 @@
+p{
+	color: rgb(238, 130, 238);
+	direction: ltr;
+	letter-spacing: 20px;
+	text-align: justify;
+	text-shadow: 5px 5px 10px red;
+	text-transform: capitalize;
+	text-indent: 2em;
+}
+
+.p2{
+	direction: rtl;
+}
+
+.p3{
+	direction: rtl;
+}
