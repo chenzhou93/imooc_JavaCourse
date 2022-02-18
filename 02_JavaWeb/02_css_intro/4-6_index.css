@@ -1,0 +1,15 @@
+p::before{
+	content: "hello"; /* 每一段落前加上字 */
+}
+
+body::after{
+	content: "end";
+}
+
+p::first-line{
+	background-color: yellow;
+}
+
+p::first-letter{
+	font-size: 30px;
+}

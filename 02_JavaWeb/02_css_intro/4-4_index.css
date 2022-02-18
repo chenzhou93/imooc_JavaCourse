@@ -1,0 +1,15 @@
+p:first-child{ /*恰巧p是第一个元素，才有效果 - 父元素中的第一个，恰巧为p */
+	background-color: red;
+}
+
+p:first-of-type{ /* 父元素中的第一个p */
+	background-color: red;
+}
+
+p:last-child{
+
+}
+
+p:nth-child(2){
+	
+}
