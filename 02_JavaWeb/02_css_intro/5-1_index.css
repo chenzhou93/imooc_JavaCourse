@@ -1,0 +1,26 @@
+/*.p1{
+	color: red;
+}
+*/
+
+#name{
+	color: darkred;
+}
+
+#name1{
+	color: darkred;
+}
+
+/* , 多选 */
+#name, #name1{
+	color: blue;
+}
+
+#name, #name1, p{
+	color: blue;
+}
+
+*{ /* 当前body里所有内容 */
+	font-size: 20px;
+}
+

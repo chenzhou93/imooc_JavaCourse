@@ -1,0 +1,19 @@
+div{
+	width: 200px;
+	height: 200px;
+	background-color: red;
+}
+
+.div1{
+	background-color: yellow!important;
+}
+
+#div2{
+	background-color: blue;
+}
+/* 出现覆盖，冲突时，以后出现的为准 */
+
+/* 嵌套 */
+.d1 .div1{
+	background-color: greenyellow;
+}

@@ -1,0 +1,16 @@
+#div1 p{
+	color: red;
+} /* 选中div1 范围内（子孙）所有的段落 */
+
+#div1>p{
+	color: red;
+} /* div1 子选择 直接属于div1的 */
+
+#div2+p{
+	color: yellow;
+} /* 和 div2 同级的 p 被选中 */
+
+p[class="p1"]{
+	color: blue;
+}
+
