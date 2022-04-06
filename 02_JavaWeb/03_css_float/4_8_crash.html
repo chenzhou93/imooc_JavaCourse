@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="4_8_crash.css">
+</head>
+<body>
+	<!-- 崩溃 破坏 崩塌 父一级的块级元素高度发生了破坏 -->
+	<!-- 不设定宽度的情况下，默认宽度是上级宽度，即 body， 默认高度为div里面内容的高度-->
+
+	<div id="div1">
+		<div id="div2">
+			<div id="div3"></div>
+		</div>
+	</div>  
+
+</body>
+</html>
