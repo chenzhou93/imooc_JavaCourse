@@ -1,0 +1,9 @@
+.main{
+	width: 500px;
+	height: 500px;
+	background-color: #667766;
+	top: 20px;
+	left: 20px;
+	position: relative;
+	/* 设定 top, left 时要有position */
+}

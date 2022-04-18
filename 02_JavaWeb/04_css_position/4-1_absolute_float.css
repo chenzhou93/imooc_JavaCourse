@@ -1,0 +1,22 @@
+div{
+	width: 100px;
+	height: 100px;
+}
+
+.div1{
+	background-color: red;
+}
+
+.div2{
+	background-color: green;
+}
+
+.div3{
+	background-color: blue;
+}
+
+.div0{
+	/*position: absolute; 文字会被覆盖*/
+	float: left; /* 文字不会被覆盖 */
+	height: 300px;
+}
