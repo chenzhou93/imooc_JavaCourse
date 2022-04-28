@@ -6,12 +6,19 @@
 	<title></title>
 	<script type="text/javascript" src="7_5_select.js"></script>
 </head>
-<body onload="ymd()">
+<body onload="ymd(),initLogo()">
 
 	<form>
 		<select name="yyyy" id="yyyy" onchange="selectYmd()"></select>Year
 		<select name="mm" id="mm" onchange="selectYmd()"></select>Month
 		<select name="dd" id="dd"></select>Day
+		<input type="button" name="" value="Delete Item" onclick="deleteSelect()">
+		
+		<br>
+
+		<img id="logoImg" src="img/headlogo/1.gif">
+		<select id="logo" onchange="selectLogo()"></select>
+
 	</form>
 
 </body>

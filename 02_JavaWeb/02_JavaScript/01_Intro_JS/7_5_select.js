@@ -67,6 +67,28 @@ function selectYmd(){
 
 }
 
+function deleteSelect(){
+	var dd = document.getElementById("dd");
+	//dd.options.remove(1);
+	for(i=dd.length; i>=0; i--){
+		dd.options.remove(0);
+	}
+}
+
+function initLogo(){
+	var logo = document.getElementById("logo");
+	for(var i=1; i<=15; i++){
+		logo.options.add(new Option(i, i));
+	}
+}
+
+function selectLogo(){
+	var logo = document.getElementById("logo");
+	var n = logo.value;
+	var logoImg = document.getElementById("logoImg");
+	logoImg.src = "image/headLogo/" + n + ".gif";
+}
+
 
 
 
