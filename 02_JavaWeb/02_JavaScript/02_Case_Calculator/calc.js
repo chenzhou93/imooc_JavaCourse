@@ -58,10 +58,12 @@ function init(){//Recommended
 						break;
 
 					case "C":
-					break;
+						num.value = "0";
+						break;
 
 					case "+/-":
-					break;
+						num.value = sign(num.value);
+						break;
 
 					case "=":
 						switch(fh){
@@ -114,6 +116,17 @@ function back(n){
 	if(!isNull(n)){
 		n = 0;
 	}
+	return n;
+}
+
+//+/-
+function sign(n){
+	// if(n.indexOf("-") == -1){
+	// 	n = "-" + n;
+	// }else{
+	// 	n = n.substr(1, n.length);
+	// }
+	n = Number(n * (-1));
 	return n;
 }
 

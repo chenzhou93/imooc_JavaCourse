@@ -6,8 +6,9 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="calc.css">
 	<script type="text/javascript" src="calc.js"></script>
+	<script type="text/javascript" src="js/mooc.js"></script>
 </head>
-<body onload="init()">
+<body onload="init(), init_imooc()">
 	<div id="div1">
 		<div id="div2">
 			<input type="text" id="num" name="num" /> <!-- value="0"  disabled="disabled" -->
@@ -32,7 +33,7 @@
 			<input type="button" value="0" name="" id="" />
 			<input type="button" value="." name="" id="" />
 			<input type="button" value="=" name="" id="" />
-			<input type="button" value="m" name="" id="" /> <!-- m = imooc -->
+			<input type="button" value="m" name="" id="imooc" /> <!-- m = imooc -->
 		</div>
 	</div>
 </body>

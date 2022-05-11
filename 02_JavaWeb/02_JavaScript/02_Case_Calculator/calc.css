@@ -23,4 +23,11 @@ input[type="text"]{
 	width: 150px;
 	text-align: right;
 	background-color: #fff;
+	padding-right: 5px;
+	box-sizing: border-box;
+}
+
+input[type="button"]:hover{
+	background-color: yellow;
+	border: 1px solid;
 }
