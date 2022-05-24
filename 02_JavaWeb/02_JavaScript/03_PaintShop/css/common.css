@@ -1,0 +1,28 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+.header{
+	margin: 25px auto 0 50px;
+}
+
+.header .menu ul{
+	display: none;
+}
+
+.header .logo{
+	float: left;
+	position: relative;
+}
+
+.header .menu{
+	float: left;
+	position: relative;
+	margin-top: 12px;
+	margin-left: 16px;
+}
+
+.header .menu:hover ul{
+	display: block;
+}
