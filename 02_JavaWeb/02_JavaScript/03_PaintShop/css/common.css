@@ -4,11 +4,17 @@
 }
 
 .header{
-	margin: 25px auto 0 50px;
+	margin: 25px auto;
+	width: 1200px; /* image size */
 }
 
 .header .menu ul{
 	display: none;
+	list-style: none;
+	position: absolute;
+	width: 80px;
+	opacity: 0.5;
+	background-color: white;
 }
 
 .header .logo{
@@ -23,6 +29,64 @@
 	margin-left: 16px;
 }
 
-.header .menu:hover ul{
+/*.header .menu:hover ul{
 	display: block;
+}*/
+
+.header .menu ul li{
+	margin-top: 20px;
 }
+
+.header .menu .menu_title{
+	border-button:  1px solid black;
+	padding-bottom: 20px;
+	width: 80px;
+	text-align: center;
+}
+
+a{
+	text-decoration: none;
+}
+
+.header .auth{
+	float: right;
+}
+
+.header .auth ul li{
+	float: left;
+	margin-right: 70px;
+	margin-top: 12px;
+	list-style: none;
+}
+
+.content{
+	width: 1200px;
+	margin: 25px auto;
+}
+
+.content .banner .banner-img{
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
