@@ -31,3 +31,35 @@
 	font-size: 16px;
 	font-weight: bold;
 }
+
+.content .Contact{
+	background-image: url(../images/banner3.jpg);
+	background-size: 100%;
+}
+
+.content .Contact{
+	height: 700px;
+	padding-top: 100px;
+	padding-right: 1px;
+}
+
+.content .Contact form input{
+	width: 300px;
+	height: 30px;
+	margin-left: 45%;
+	margin-top: 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	background: transparent;
+}
+
+::placeholder{
+	color: red;
+	padding-left: 10px;
+}
+
+.content .Contact form #comment{
+	height: 90px;
+
+}
