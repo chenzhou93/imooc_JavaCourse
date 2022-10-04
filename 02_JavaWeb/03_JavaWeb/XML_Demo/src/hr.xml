@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Comments - HR System -->
+<hr>
+	<employee no="3309">
+		<name>Zhang San</name>
+		<age>31</age>
+		<salary>4000</salary>
+		<department>
+			<dname>Accounting</dname>
+			<address>XX-Building B-103</address>
+		</department>
+	</employee>
+	
+	<employee no="3310">
+		<name>Zhang San</name>
+		<age>23</age>
+		<salary>3000</salary>
+		<department>
+			<dname>Engineering</dname>
+			<address>XX-Building B-104</address>
+		</department>
+	</employee>
+</hr>
