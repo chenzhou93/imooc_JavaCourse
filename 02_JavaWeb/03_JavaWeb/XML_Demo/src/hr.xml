@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Comments - HR System -->
-<hr>
+<!-- Comments - HR System --><hr>
 	<employee no="3309">
 		<name>Zhang San</name>
 		<age>31</age>
@@ -20,4 +19,4 @@
 			<address>XX-Building B-104</address>
 		</department>
 	</employee>
-</hr>
+<employee no="3311"><name>Iron Li</name><salary>3500</salary><department><dname>HR</dname><address>XX Building-b105</address></department></employee></hr>
