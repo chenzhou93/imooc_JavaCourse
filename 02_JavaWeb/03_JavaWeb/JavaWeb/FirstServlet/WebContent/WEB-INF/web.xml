@@ -14,8 +14,30 @@
   	<servlet-class>com.imooc.servlet.FirstServlet</servlet-class>
   </servlet>
   
+  <servlet>
+  	<servlet-name>Sample</servlet-name>
+  	<servlet-class>com.imooc.servlet.SampleServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>RequestMethod</servlet-name>
+  	<servlet-class>com.imooc.servlet.RequestMethodServlet</servlet-class>
+  </servlet>
+  
+  <!-- Bind URL -->
   <servlet-mapping>
   	<servlet-name>first</servlet-name>
   	<url-pattern>/hi</url-pattern>
   </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>requestMethod</servlet-name>
+  	<url-pattern>/request_method</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>Sample</servlet-name>
+  	<url-pattern>/sample</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
