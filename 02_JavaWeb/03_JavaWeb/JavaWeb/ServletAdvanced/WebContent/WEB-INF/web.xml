@@ -10,6 +10,14 @@
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
   <servlet>
+  	<servlet-name>patternServlet</servlet-name>
+  	<servlet-class>com.imooc.servlet.pattern.PatternServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>patternServlet</servlet-name>
+  	<url-pattern>/pattern/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <description></description>
     <display-name>UserAgentServlet</display-name>
     <servlet-name>UserAgentServlet</servlet-name>
@@ -28,5 +36,105 @@
   <servlet-mapping>
     <servlet-name>ContetTypeServlet</servlet-name>
     <url-pattern>/ContetTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CheckLoginServlet</display-name>
+    <servlet-name>CheckLoginServlet</servlet-name>
+    <servlet-class>com.imooc.servlet.direct.CheckLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckLoginServlet</servlet-name>
+    <url-pattern>/CheckLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CheckLoginServlet1</display-name>
+    <servlet-name>CheckLoginServlet1</servlet-name>
+    <servlet-class>com.imooc.servlet.direct.CheckLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckLoginServlet1</servlet-name>
+    <url-pattern>/direct/check</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>IndexServlet</display-name>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>com.imooc.servlet.direct.IndexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/direct/IndexServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ImoocLoginServlet</display-name>
+    <servlet-name>ImoocLoginServlet</servlet-name>
+    <servlet-class>com.imooc.servlet.cookie.ImoocLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImoocLoginServlet</servlet-name>
+    <url-pattern>/cookies/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ImoocIndexServlet</display-name>
+    <servlet-name>ImoocIndexServlet</servlet-name>
+    <servlet-class>com.imooc.servlet.cookie.ImoocIndexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImoocIndexServlet</servlet-name>
+    <url-pattern>/cookies/index</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SessionLoginServlet</display-name>
+    <servlet-name>SessionLoginServlet</servlet-name>
+    <servlet-class>com.imooc.servlet.session.SessionLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionLoginServlet</servlet-name>
+    <url-pattern>/session/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SessionIndexServlet</display-name>
+    <servlet-name>SessionIndexServlet</servlet-name>
+    <servlet-class>com.imooc.servlet.session.SessionIndexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionIndexServlet</servlet-name>
+    <url-pattern>/SessionIndex</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletContextInitServlet</display-name>
+    <servlet-name>ServletContextInitServlet</servlet-name>
+    <servlet-class>com.imooc.servlet.servletcontext.ServletContextInitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletContextInitServlet</servlet-name>
+    <url-pattern>/ServletContext/Init</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletContextDefaultServlet</display-name>
+    <servlet-name>ServletContextDefaultServlet</servlet-name>
+    <servlet-class>com.imooc.servlet.servletcontext.ServletContextDefaultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletContextDefaultServlet</servlet-name>
+    <url-pattern>/ServletContext/Default</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CharsetServlet</display-name>
+    <servlet-name>CharsetServlet</servlet-name>
+    <servlet-class>com.imooc.servlet.charset.CharsetServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CharsetServlet</servlet-name>
+    <url-pattern>/charset/process</url-pattern>
   </servlet-mapping>
 </web-app>
