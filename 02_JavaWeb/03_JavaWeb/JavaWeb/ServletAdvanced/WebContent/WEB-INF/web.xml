@@ -17,6 +17,18 @@
   	<servlet-name>patternServlet</servlet-name>
   	<url-pattern>/pattern/*</url-pattern>
   </servlet-mapping>
+  <context-param>
+	  <param-name>copyright</param-name>
+	  <param-value>@2018 imooc.com</param-value>
+  </context-param>
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/error/404.html</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/error/500.jsp</location>
+  </error-page>
   <servlet>
     <description></description>
     <display-name>UserAgentServlet</display-name>

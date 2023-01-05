@@ -27,8 +27,12 @@ public class ServletContextInitServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ServletContext context = request.getServletContext();
-		context.setAttribute("copyright", "@2018 imooc.com");
-		context.setAttribute("title", "imooc website");
+		String copyright = context.getInitParameter("copyright");
+		String title = context.getInitParameter("title");
+//		context.setAttribute("copyright", "@2018 imooc.com");
+//		context.setAttribute("title", "imooc website");
+		context.setAttribute("copyright", copyright);
+		context.setAttribute("title", title);
 		response.getWriter().println("init success");
 	}
 

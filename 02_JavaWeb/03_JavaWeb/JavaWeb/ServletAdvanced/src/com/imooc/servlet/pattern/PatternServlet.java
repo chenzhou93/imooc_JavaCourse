@@ -15,6 +15,7 @@ public class PatternServlet extends HttpServlet{
 		String url = request.getRequestURL().toString();
 		System.out.println(url);
 		String id = url.substring(url.lastIndexOf("/") + 1);
+		int eid = Integer.parseInt(id);
 		PrintWriter out = response.getWriter();
 		out.println(id);
 		if(id.equals("1")) {
