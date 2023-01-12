@@ -1,0 +1,24 @@
+[
+	{
+		"empno": "7369",
+		"ename": "lining",
+		"job": "sde",
+		"hiredate": "2017-09-12",
+		"salary": 13000,
+		"dname": "R&D"
+	},
+	{
+		"empno": "7499",
+		"ename": "wangning",
+		"job": "pm",
+		"hiredate": "2017-01-12",
+		"salary": 12000,
+		"dname": "R&D",
+		"customers": [
+			{
+				"cname": "lidong",
+				"cname": "liunan"
+			}
+		]
+	}
+]
