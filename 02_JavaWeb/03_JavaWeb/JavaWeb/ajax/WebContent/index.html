@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input id="btnload" type="button" value="loading">
+	<div id="divContent">
+		
+	</div>
+	<script>
+		document.getElementById("btnload").onclick = function(){
+			// 1.Create XMLHttpRequest instance
+			var xmlhttp;
+			if(window.XMLHttpRequest){
+				//IE7, CHROME, SAFARI
+				xmlhttp = new XMLHttpRequest();
+			}else{
+				//IE5, IE6
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			console.log(xmlhttp);
+			
+			// 2.Send ajax request
+			xmlhttp.open("GET", "/ajax/content", true); //"http://localhost:8080/ajax/content"
+			xmlhttp.send();
+			
+			// 3.Handle server response
+			xmlhttp.onreadystatechange = function(){
+				if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+					var t = xmlhttp.responseText;
+					//alert(t);
+					document.getElementById("divContent").innerHTML = t;
+				}
+			}
+		}
+	</script>
+</body>
+</html>
