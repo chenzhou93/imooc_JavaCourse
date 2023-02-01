@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="container">
+		
+	</div>
+	
+	<script>
+		//1.Create xmlHttpRequest
+		var xmlHttp;
+		if(window.XMLHttpRequest){
+			xmlHttp = new XMLHttpRequest();
+		}else{
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		//2.Send Ajax request
+		xmlHttp.open("GET", "/ajax/news_list", true);
+		xmlHttp.send();
+		
+		//3. Handle response
+		xmlhttp.openreadystatechange = function(){
+			if(xmlhttp.readyState ==4 && xmlhttp.status == 200){
+				var text = xmlhttp.responseText;
+				console.log(text);
+				var json = JSON.parse(text);
+				var html = "";
+				for(i=0; i<json.length; i++){
+					var news = json[i];
+					html = html + "<h1>" + news.title +"</h1>";
+					html = html + "<h2>" + news.date + "&nbsp; " + news.source +"</h2>";
+					html = html + "<hr/>";
+				}
+				document.getElementById("container").innerHTML = html;
+			}
+		}
+	</script>
+</body>
+</html>
