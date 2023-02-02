@@ -30,10 +30,18 @@ public class NewsListServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String type = request.getParameter("t");
 		ArrayList<News> list = new ArrayList<News>();
-		list.add(new News("TIOBE:2008-05", "2008-05-01", "TIOBE", "other"));
-		list.add(new News("TIOBE:2008-06", "2008-05-01", "TIOBE", "other"));
-		list.add(new News("TIOBE:2008-07", "2008-05-01", "TIOBE", "other"));
+		if(type != null && type.equals("pypl")) {
+			list.add(new News("PYPL:2008-05", "2008-05-01", "PYPL", "other"));
+			list.add(new News("PYPL:2008-06", "2008-05-01", "PYPL", "other"));
+			list.add(new News("PYPL:2008-07", "2008-05-01", "PYPL", "other"));
+		}else if(type == null || type.equals("tiobe")) {
+			list.add(new News("TIOBE:2008-05", "2008-05-01", "TIOBE", "other"));
+			list.add(new News("TIOBE:2008-06", "2008-05-01", "TIOBE", "other"));
+			list.add(new News("TIOBE:2008-07", "2008-05-01", "TIOBE", "other"));
+		}
+		
 		String json = JSON.toJSONString(list);
 		response.setContentType("text/html;charset=UTF-8");
 		response.getWriter().println(json);
