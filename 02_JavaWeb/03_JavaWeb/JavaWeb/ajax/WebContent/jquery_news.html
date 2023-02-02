@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.6.3.js"></script>
+<script type="text/javascript">
+	$(function(){//页面就绪函数 - 页面加载完成后启动的代码 //Parameter JSON Object
+		$.ajax({
+			"url" : "/ajax/news_list",
+			"type" : "get",
+			//"data" : "t=tiobe",
+			"data" : {"t":"pypl", "abc":"123", "uu":"777"},
+			"dataType" : "json",
+			 
+			"success" : function(json){
+				console.log(json);
+				for(var i=0; i<json.length; i++){
+					$("#container").append("<h1>" + json[i].title + "</h1>");
+				}
+			},
+			"error" : function(xmlhttp, errorText){
+				console.log(xmlhttp);
+				console.log(errorText);
+				if(xmlhttp.status == 405){
+					alert("invalid request method");
+				}else if(xmlhttp.status == 404){
+					alert("not found");
+				}else if(xmlhttp.status = 500){
+					alert("internal error");
+				}
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<div id="container"></div>
+</body>
+</html>
