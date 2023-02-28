@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="#" method="post" id="frmInfo">
+		<div id="error" style="color:red">
+		</div>
+		
+		<div>
+			Name: <input id="name" name="name"/>
+			Id: <input id="idno" name="idno"/>
+		</div>
+		<div>
+			<input type="submit"/>
+		</div>
+	</form>
+	<script type="text/javascript">
+		document.getElementById("frmInfo").onsubmit = function(){
+			var regex1  = /^[\u4e00-\u9fa5]{2,8}$/; //Chinese character verify
+			var regex2 = /^[1234568]\d{16}[0-9xX]$/
+			var name = document.getElementById("name").value;
+			var idno = document.getElementById("idno").value;
+			if(regex1.test(name) == false){
+				document.getElementById("err").innerHTML = "invalid name";
+				return false; //no submit
+			}else if(regex2.test(idno) == false){
+				document.getElementById("err").innerHTML = "invalid id";
+				return false; //no submit
+			}else{
+				alert("validation pass, submitting");
+				return true;
+			}
+		}
+	</script>
+</body>
+</html>
