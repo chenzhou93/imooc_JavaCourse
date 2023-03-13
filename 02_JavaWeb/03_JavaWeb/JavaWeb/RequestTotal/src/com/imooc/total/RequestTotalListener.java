@@ -28,6 +28,13 @@ public class RequestTotalListener implements ServletContextListener, ServletRequ
 	
 	@Override
 	public void requestInitialized(ServletRequestEvent sre) {
+		
+		HttpServletRequest request = (HttpServletRequest)sre.getServletRequest();
+		String url = request.getRequestURL().toString();
+		if(url.endsWith("/rt") == true) {
+			return;
+		}
+		
 		//Time List: 10:02 10:03 10:04
 		//Value List:  3     4     1
 		List<String> timeList = (List)sre.getServletContext().getAttribute("timeList");
