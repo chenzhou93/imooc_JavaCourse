@@ -10,6 +10,16 @@
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
   <listener>
-  	<listener-class>com.imooc.total.RequestTotalListener</listener-class>
+    <listener-class>com.imooc.total.RequestTotalListener</listener-class>
   </listener>
+  <servlet>
+    <description></description>
+    <display-name>RequestTotalServlet</display-name>
+    <servlet-name>RequestTotalServlet</servlet-name>
+    <servlet-class>com.imooc.total.RequestTotalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestTotalServlet</servlet-name>
+    <url-pattern>/rt</url-pattern>
+  </servlet-mapping>
 </web-app>
